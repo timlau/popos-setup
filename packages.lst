@@ -7,9 +7,12 @@ virtualbox virtualbox-guest-additions-iso virtualbox-ext-pack
 vlc
 gitg
 google-cloud-sdk
-
 inkscape
 darktable
 handbrake
 code
 google-chrome-stable
+gnome-tweak-tool
+rclone-browser
+simplescreenrecorder
+nautilus-dropbox
