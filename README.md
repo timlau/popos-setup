@@ -24,6 +24,7 @@ cd popos-setup-master/
 * Edit the gnome-extention.lst to contain the extention url you want to install (from https://extensions.gnome.org/)
 * Optional edit repo-setup.sh to add extra sources (check example for google-cloud-sdk)
 * if you don't want to install any packages, flatpak or gnome extention, then just delete or rename the .lst file
+* if you temporary what to skip an element in an .lst file just add # in the start of the line
 
 ```sh
 ./setup-pop.sh
