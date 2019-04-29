@@ -1,5 +1,5 @@
 #!/bin/bash
-# Setup script for Pop OS 19.04
+# Setup script for Pop OS 19.04 by Tim Lauridsen
 
 # Install packages if not installed already
 pkg_install () {
@@ -65,30 +65,33 @@ print_hdr "Setup repos"
 file="packages.lst"
 if [ -f $file ]; then
     print_hdr "Installing packages"
+    grep -v -e'^#' -e'^[[:space:]]*$' < "$file" | {
     while IFS= read -r line
     do
         pkg_install $line
-    done <"$file"
+    done }
 fi
 
 # Install FlatPak's
 file="flatpaks.lst"
 if [ -f $file ]; then
     start_flatpaks
+    grep -v -e'^#' -e'^[[:space:]]*$' < "$file" | {
     while IFS= read -r line
     do
         fp_install $line
-    done <"$file"
+    done }
 fi
 
 # Install gnome extensions
 file="gnome-extentions.lst"
 if [ -f $file ]; then
     print_hdr "Installing Gnome Extension"
+    grep -v -e'^#' -e'^[[:space:]]*$' < "$file" | {
     while IFS= read -r line
     do
         ge_install $line
-    done <"$file"
+    done }
 fi
 
 
