@@ -61,34 +61,34 @@ ge_install () {
 
 # Install Packages
 print_hdr "Setup repos"
-sh ./repo-setup.sh 
-if [ -f packages.lst ]; then
+./repo-setup.sh 
+file="packages.lst"
+if [ -f $file ]; then
     print_hdr "Installing packages"
-    IFS=$'\r\n' GLOBIGNORE='*' command eval 'packages=$(cat packages.lst)'
-    for pkg in $packages
+    while IFS= read -r line
     do
-        pkg_install $pkg
-    done
+        pkg_install $line
+    done <"$file"
 fi
 
 # Install FlatPak's
-if [ -f flatpaks.lst ]; then
+file="flatpaks.lst"
+if [ -f $file ]; then
     start_flatpaks
-    IFS=$'\r\n' GLOBIGNORE='*' command eval 'flatpaks=$(cat flatpaks.lst)'
-    for fpak in $flatpaks
+    while IFS= read -r line
     do
-        fp_install $fpak
-    done
+        fp_install $line
+    done <"$file"
 fi
 
 # Install gnome extensions
-if [ -f gnome-extentions.lst ]; then
+file="gnome-extentions.lst"
+if [ -f $file ]; then
     print_hdr "Installing Gnome Extension"
-    IFS=$'\r\n' GLOBIGNORE='*' command eval 'extentions=$(cat gnome-extentions.lst)'
-    for ge in $extentions
+    while IFS= read -r line
     do
-        ge_install $ge
-    done
+        ge_install $line
+    done <"$file"
 fi
 
 
