@@ -20,7 +20,7 @@ cd popos-setup-master/
 ## Usage
 
 * Edit the packages.lst files to contain the package you want to have installed
-* Edit the flatpaks.lst to contain the flatpak's you want to have installed (get names from [flathub https://flathub.org]
+* Edit the flatpaks.lst to contain the flatpak's you want to have installed (get names from https://flathub.org)
 * Edit the gnome-extention.lst to contain the extention url you want to install (from https://extensions.gnome.org/)
 * Optional edit repo-setup.sh to add extra sources (check example for google-cloud-sdk)
 
