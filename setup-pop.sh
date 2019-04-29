@@ -100,7 +100,7 @@ fi
 # Install gnome extensions
 file="gnome-extentions.lst"
 if [ -f $file ]; then
-    print_hdr "Installing Gnome Extension"
+    print_hdr "Installing Gnome Extensions"
     grep -v -e'^#' -e'^[[:space:]]*$' < "$file" | {
     while IFS= read -r line
     do
