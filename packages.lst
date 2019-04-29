@@ -1,14 +1,14 @@
 # Add package names to install in this file
-# Lines starting with # will be ignored.
-#
- 
+# Blank lines and lines starting with # will be ignored.
+# you can add multiple packages in each line, only the first one is used if already installed
+
 htop
 virtualbox virtualbox-guest-additions-iso virtualbox-ext-pack
 vlc
 gitg
-
 google-cloud-sdk
+
 inkscape
 darktable
 handbrake
-#code
+code

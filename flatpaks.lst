@@ -1,2 +1,5 @@
+# Add flatpak names to install in this file
+# Blank lines and lines starting with # will be ignored.
+
 org.gimp.GIMP
 org.olivevideoeditor.Olive
