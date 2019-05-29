@@ -11,8 +11,10 @@ inkscape
 darktable
 handbrake
 code
-google-chrome-stable
+chromium-browser
+#google-chrome-stable
 gnome-tweak-tool
 rclone-browser
 simplescreenrecorder
 nautilus-dropbox
+fonts-powerline
